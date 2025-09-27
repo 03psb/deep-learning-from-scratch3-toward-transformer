@@ -1,4 +1,5 @@
 import numpy as np
+import dezero
 import dezero.functions as F
 from dezero import cuda
 from dezero.core import Parameter
