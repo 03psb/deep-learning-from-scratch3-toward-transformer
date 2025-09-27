@@ -38,6 +38,7 @@ else:
     import dezero.utils
     import dezero.cuda
     import dezero.transforms
+    import dezero.transformers
 
 setup_variable()
 __version__ = '0.0.13'
