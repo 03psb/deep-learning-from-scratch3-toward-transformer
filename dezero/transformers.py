@@ -3,7 +3,7 @@ import dezero
 import dezero.functions as F
 from dezero import cuda
 from dezero.core import Parameter
-from dezero.layers import Linear
+from dezero.layers import Layer, Linear
 
 
 
@@ -26,7 +26,7 @@ class SingleHeadAttention(Layer):
         q = self.W_Q(x)
         k = self.W_K(x)
         v = self.W_V(x)
-        s_out = F.softmax(F.matmul(q, k.T) / np.sqrt(d_model))
+        s_out = F.softmax(F.matmul(q, k.T) / np.sqrt(self.d_model))
         y = F.matmul(s_out, v)
         return y
 
